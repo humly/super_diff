@@ -11,7 +11,11 @@ module SuperDiff
 
         attr_private :code, :color_enabled, :preserve_as_whole_file
 
-        def initialize(code, color_enabled:, preserve_as_whole_file: false)
+        def initialize(
+          code,
+          color_enabled: false,
+          preserve_as_whole_file: false
+        )
           @code = code.strip
           @color_enabled = color_enabled
           @preserve_as_whole_file = preserve_as_whole_file

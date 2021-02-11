@@ -1,5 +1,3 @@
-require "super_diff/active_support"
-
 module SuperDiff
   module ActiveRecord
     autoload :DiffFormatters, "super_diff/active_record/diff_formatters"

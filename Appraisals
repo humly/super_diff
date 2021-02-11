@@ -1,35 +1,32 @@
 rails_dependencies = proc do
   gem "activerecord-jdbcsqlite3-adapter", platform: :jruby
   gem "jdbc-sqlite3", platform: :jruby
+  gem "combustion"
 end
 
 appraisals = {
   rails_5_0: proc {
     instance_eval(&rails_dependencies)
 
-    gem "activerecord", "~> 5.0.0"
-    gem "railties", "~> 5.0.0"
+    gem "rails", "~> 5.0.0"
     gem "sqlite3", "~> 1.3.6", platform: [:ruby, :mswin, :mingw]
   },
   rails_5_1: proc {
     instance_eval(&rails_dependencies)
 
-    gem "activerecord", "~> 5.1.0"
-    gem "railties", "~> 5.1.0"
+    gem "rails", "~> 5.1.0"
     gem "sqlite3", "~> 1.3.6", platform: [:ruby, :mswin, :mingw]
   },
   rails_5_2: proc {
     instance_eval(&rails_dependencies)
 
-    gem "activerecord", "~> 5.2.0"
-    gem "railties", "~> 5.2.0"
+    gem "rails", "~> 5.2.0"
     gem "sqlite3", "~> 1.3.6", platform: [:ruby, :mswin, :mingw]
   },
   rails_6_0: proc {
     instance_eval(&rails_dependencies)
 
-    gem "activerecord", "~> 6.0"
-    gem "railties", "~> 6.0"
+    gem "rails", "~> 6.0"
     gem "sqlite3", "~> 1.4.0", platform: [:ruby, :mswin, :mingw]
   },
   no_rails: proc {},
